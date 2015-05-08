@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html ng-app="AlertSummary" ng-controller="DateRangeController">
+<head>
+	<title>CBTS</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+	<link rel="stylesheet" type="text/css" media="all" href="css/daterangepicker-bs3.css" />
+	<link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.7/fastclick.min.js"></script>
+       	
+</head>
+<body>
+  <div class="container">
+ 		<header id="header">
+			<strong class="logo"><a href="#">cbts Advanced Cyber Security</a></strong>
+			<div class="slash-block">
+				<strong class="ttl">system alert</strong>
+				<a href="#">
+					<strong class="number">42</strong>
+					<span class="emails"><span>UNREAD</span> EMAILS</span>
+				</a>
+				<div class="avatar"><img src="images/img-01.jpg" width="41" height="41" alt="#"></div>
+			</div><!-- slash-block -->
+		</header><!-- header -->
+		<nav id="main-nav">
+			<ul>
+				<li><a href="#">Dashboard</a></li>
+				<li class="active"><a href="#">Email security</a></li>
+				<li><a href="#">dns security</a></li>
+				<li><a href="#">network security</a></li>
+				<li><a href="#">analysis framework</a></li>
+				<li><a href="#">reports</a></li>
+			</ul>
+		</nav><!-- main-nav -->
+		<div class="row">
+			<section id="content" class="col-md-10">
+				<header class="heading">
+					<h1>Email Alerts</h1>
+					<div class="paging">
+						<ul>
+							<li class="active"><a href="#">5</a></li>
+							<li><a href="#">10</a></li>
+							<li><a href="#">25</a></li>
+						</ul>
+						<strong class="ttl">Number of Alerts</strong>
+					</div><!-- paging -->
+				</header><!-- heading -->
+
+ 			
+                </div>
+						
+				<form class="form-horizontal">
+                 <fieldset>
+                  <div class="control-group">
+                    <div class="controls">
+                     <div class="input-prepend input-group">
+                       <span class="add-on input-group-addon"><i class="glyphicon glyphicon-calendar fa fa-calendar" ></i></span><input type="text" style="width:200px;background-color:#E55451;"  name="reservation" id="reservation" class="form-control" value="01/01/2014 - 02/01/2014" /> 
+					 </div>
+                    </div>
+                  </div>
+                </fieldset>
+              
+               
+              	<section class="slider">
+					<ul class="headline">
+						<li>30 DAYS AGO&nbsp;&nbsp;<h2>Severity</h2></li>
+						<li>&nbsp;&nbsp;&nbsp;&nbsp;RIGHT NOW</li>
+					</ul><!-- headline -->
+					<slider model="teste" type="text" class="span2" value="" data-slider-min="0" data-slider-max="70" data-slider-step="1" data-slider-	value="[0,70]" data-slider-orientation="horizontal" data-slider-selection="after" data-slider-tooltip="show"></slider>
+		
+				</section><!-- slider -->
+<!---
+				 	 <div id="alert1"> Alert Count : {{alertcount}}  OverallPainLevel : {{oapainlevel}} Yara : {{yara}}  static_mmem: {{static_mmem}}
+					 </div> 
+											
+						<b>Alerts From: {{teste[0]}}&nbsp;&nbsp;&nbsp;Alerts To: {{teste[1]}}</b>
+					
+						<div id="alert3"<OverallPainLevel>
+								<span class="value color-01">{{oapainlevel}}%</span>
+						</div>
+
+						<div id="aler4" <Yara>
+								<span class="value color-01">{{yara}}</span>
+						</div>
+
+						<div id="aler4"<static_mmem>
+								<span class="value color-01">{{static_mmem}}</span>
+						</div>
+
+						<br/><br/>
+
+-->		
+                  
+             
+<!---						<div id="slider-01"></div>
+					
+				</section>
+-->				
+				 
+               </form>  
+  		               
+
+				<section class="slider">
+					<ul class="headline">
+						<li>30 DAYS AGO</li>
+						<li><h2>Filter By Age</h2></li>
+						<li>RIGHT NOW</li>
+					</ul><!-- headline -->
+					
+						<div id="slider-02"></div>
+					
+				</section><!-- slider -->
+		 		
+				<div class="results">
+					<section class="result">
+						<div class="row">
+					
+
+							<div class="percentage">   
+								<a ng-href="#"> 
+<!---									<span class="value color-01">92%</span>     -->   							
+							 
+								    <span class="value color-01">{{oapainlevel}}%</span>  
+									<span class="date">MAR 25, 2014 8:12 AM</span>
+									
+<!---								</a>   -->
+							</div><!-- percentage-->
+							<div class="file">
+								<a href="#">example_document.docx</a>
+							</div><!-- file-->
+							<div class="info">
+								<dl>
+									<dt>T</dt><dd><a href="mailto:john.innocent@jefferscommunications.net">john.innocent@jefferscommunications.net</a></dd>
+									<dt>F</dt><dd><a href="mailto:evilgenius@badguy.com">evilgenius@badguy.com</a></dd>
+									<dt>S</dt><dd><a href="#">Please add me to your network on LinkedIn...</a></dd>
+								</dl>
+							</div><!-- info-->
+							<div class="score">
+								<ul class="list">
+									<li class="color-01"><a ng-href="#"><span class="quantity">{{yara}}</span> YARA</a></li>
+									<li><a href="#"><span class="quantity">32</span> Virus Total</a></li>
+									<li><a ng-href="#"><span class="quantity">{{static_mmem}}</span> SMMEM</a></li>
+									<li class="color-02"><a href="#"><span class="quantity">74</span> Blastzone</a></li>
+								</ul>
+							</div><!-- score-->
+						</div><!-- row -->
+						<div class="panel">
+							<div class="row">
+								<ul class="options">
+									<li><a href="#">Comment</a></li>
+									<li><a class="assign" href="#">Assign</a></li>
+									<li><a class="details" href="#">Details</a></li>
+								</ul><!-- options -->
+								<div class="btn-area">
+									<a href="#" class="button"><span>Assigned</span></a>
+								</div><!-- btn-area -->
+								<dl class="info-list">
+									<dt>Owner:</dt><dd><a href="#">Tony Hudson</a></dd>
+									<dt>Ticket:</dt><dd><a href="#">ACS656815</a></dd>
+								</dl>
+							</div><!-- row -->
+						</div><!-- panel -->
+					</section><!-- result -->
+					<section class="result">
+						<div class="row">
+							<div class="percentage">
+								<a href="#">
+									<span class="value color-02">76%</span>
+									<span class="date">MAR 29, 2014 12:47 PM</span>
+								</a>
+							</div><!-- percentage-->
+							<div class="file link">
+								<a href="#">http://www.dontclickme...</a>
+							</div><!-- file-->
+							<div class="info">
+								<dl>
+									<dt>T</dt><dd><a href="mailto:esmerelda.pontiac@andersbioscience.com">esmerelda.pontiac@andersbioscience.com</a></dd>
+									<dt>F</dt><dd><a href="mailto:minime@drevil.com">minime@drevil.com</a></dd>
+									<dt>S</dt><dd><a href="#">Win cruise tickets for this survey</a></dd>
+								</dl>
+							</div><!-- info-->
+							<div class="score">
+								<ul class="list">
+									<li><a href="#"><span class="quantity">16</span> YARA</a></li>
+									<li><a href="#"><span class="quantity">22</span> Virus Total</a></li>
+									<li><a href="#"><span class="quantity">8</span> SMMEM</a></li>
+									<li class="color-01"><a href="#"><span class="quantity">99</span> Blastzone</a></li>
+								</ul>
+							</div><!-- score-->
+						</div><!-- row -->
+						<div class="panel">
+							<div class="row">
+								<ul class="options">
+									<li><a href="#">Comment</a></li>
+									<li><a class="assign" href="#">Assign</a></li>
+									<li><a class="details" href="#">Details</a></li>
+								</ul><!-- options -->
+								<div class="btn-area">
+									<a href="#" class="button"><span>Open</span></a>
+								</div><!-- btn-area -->
+								<dl class="info-list">
+									<dt>Owner:</dt><dd><a class="color-01" href="#">UNASSIGNED</a></dd>
+									<dt>Ticket:</dt><dd><a href="#">ACS652225</a></dd>
+								</dl>
+							</div><!-- row -->
+						</div><!-- panel -->
+					</section><!-- result -->
+					<section class="result">
+						<div class="row">
+							<div class="percentage">
+								<a href="#">
+									<span class="value">23%</span>
+									<span class="date">MAR 25, 2014 11:23 AM</span>
+								</a>
+							</div><!-- percentage-->
+							<div class="file pdf">
+								<a href="#">HaywardClockResume.pdf</a>
+							</div><!-- file-->
+							<div class="info">
+								<dl>
+									<dt>T</dt><dd><a href="mailto:themistocles@appaianway.net">themistocles@appaianway.net</a></dd>
+									<dt>F</dt><dd><a href="mailto:Metal.Havok@FrostNova.com">Metal.Havok@FrostNova.com</a></dd>
+									<dt>S</dt><dd><a href="#">Do you have time to review my resume?</a></dd>
+								</dl>
+							</div><!-- info-->
+							<div class="score">
+								<ul class="list">
+									<li class="color-02"><a href="#"><span class="quantity">79</span> YARA</a></li>
+									<li><a href="#"><span class="quantity">0</span> Virus Total</a></li>
+									<li><a href="#"><span class="quantity">3</span> SMMEM</a></li>
+									<li class="color-02"><a href="#"><span class="quantity">74</span> Blastzone</a></li>
+								</ul>
+							</div><!-- score-->
+						</div><!-- row -->
+						<div class="panel">
+							<div class="row">
+								<ul class="options">
+									<li><a href="#">Comment</a></li>
+									<li><a class="assign" href="#">Assign</a></li>
+									<li><a class="details" href="#">Details</a></li>
+								</ul><!-- options -->
+								<div class="btn-area">
+									<a href="#" class="button"><span>Pending</span></a>
+								</div><!-- btn-area -->
+								<dl class="info-list">
+									<dt>Owner:</dt><dd><a href="#">Justin Swisher</a></dd>
+									<dt>Ticket:</dt><dd><a href="#">ACS656325</a></dd>
+								</dl>
+							</div><!-- row -->
+						</div><!-- panel -->
+					</section><!-- result -->
+					<section class="result">
+						<div class="row">
+							<div class="percentage">
+								<a href="#">
+									<span class="value">18%</span>
+									<span class="date">MAR 27, 2014 6:37 AM</span>
+								</a>
+							</div><!-- percentage-->
+							<div class="file pptx">
+								<a href="#">WonderfulPres.pptxx</a>
+							</div><!-- file-->
+							<div class="info">
+								<dl>
+									<dt>T</dt><dd><a href="mailto:john.innocent@jefferscommunications.net">john.innocent@jefferscommunications.net</a></dd>
+									<dt>F</dt><dd><a href="mailto:evilgenius@badguy.com">evilgenius@badguy.com</a></dd>
+									<dt>S</dt><dd><a href="#">Please add me to your network on LinkedIn...</a></dd>
+								</dl>
+							</div><!-- info-->
+							<div class="score">
+								<ul class="list">
+									<li class="color-01"><a href="#"><span class="quantity">85</span> YARA</a></li>
+									<li><a href="#"><span class="quantity">4</span> Virus Total</a></li>
+									<li><a href="#"><span class="quantity">2</span> SMMEM</a></li>
+									<li class="color-02"><a href="#"><span class="quantity">74</span> Blastzone</a></li>
+								</ul>
+							</div><!-- score-->
+						</div><!-- row -->
+						<div class="panel">
+							<div class="row">
+								<ul class="options">
+									<li><a href="#">Comment</a></li>
+									<li><a class="assign" href="#">Assign</a></li>
+									<li><a class="details" href="#">Details</a></li>
+								</ul><!-- options -->
+								<div class="btn-area">
+									<a href="#" class="button"><span>Assigned</span></a>
+								</div><!-- btn-area -->
+								<dl class="info-list">
+									<dt>Owner:</dt><dd><a href="#">Mike Reiter</a></dd>
+									<dt>Ticket:</dt><dd><a href="#">ACS656815</a></dd>
+								</dl>
+							</div><!-- row -->
+						</div><!-- panel -->
+					</section><!-- result -->
+					<section class="result">
+						<div class="row">
+							<div class="percentage">
+								<a href="#">
+									<span class="value">9%</span>
+									<span class="date">MAR 29, 2014 12:47 PM</span>
+								</a>
+							</div><!-- percentage-->
+							<div class="file link">
+								<a href="#">http://www.dontclickme...</a>
+							</div><!-- file-->
+							<div class="info">
+								<dl>
+									<dt>T</dt><dd><a href="mailto:esmerelda.pontiac@andersbioscience.com">esmerelda.pontiac@andersbioscience.com</a></dd>
+									<dt>F</dt><dd><a href="mailto:minime@drevil.com">minime@drevil.com</a></dd>
+									<dt>S</dt><dd><a href="#">Win cruise tickets for this survey</a></dd>
+								</dl>
+							</div><!-- info-->
+							<div class="score">
+								<ul class="list">
+									<li><a href="#"><span class="quantity">16</span> YARA</a></li>
+									<li><a href="#"><span class="quantity">22</span> Virus Total</a></li>
+									<li><a href="#"><span class="quantity">8</span> SMMEM</a></li>
+									<li><a href="#"><span class="quantity">0</span> Blastzone</a></li>
+								</ul>
+							</div><!-- score-->
+						</div><!-- row -->
+						<div class="panel">
+							<div class="row">
+								<ul class="options">
+									<li><a href="#">Comment</a></li>
+									<li><a class="assign" href="#">Assign</a></li>
+									<li><a class="details" href="#">Details</a></li>
+								</ul><!-- options -->
+								<div class="btn-area">
+									<a href="#" class="button"><span>Open</span></a>
+								</div><!-- btn-area -->
+								<dl class="info-list">
+									<dt>Owner:</dt><dd><a class="color-01" href="#">UNASSIGNED</a></dd>
+									<dt>Ticket:</dt><dd><a href="#">ACS652225</a></dd>
+								</dl>
+							</div><!-- row -->
+						</div><!-- panel -->
+					</section><!-- result -->
+				</div><!-- results -->
+			</section><!-- content -->
+ 
+
+			<aside id="sidebar" class="col-md-2">
+				<ul class="side-nav">
+					<li class="active"><a href="#">Email Alerts</a></li>
+					<li><a href="#">Assigned to Me</a></li>
+					<li><a href="#">Email Trends</a></li>
+					<li><a href="#">Network Traffic</a></li>
+					<li><a href="#">Tickets</a></li>
+				</ul>
+			</aside><!-- sidebar -->
+		</div><!-- row -->
+		<footer id="footer">
+			<div class="row">
+				<div class="col-md-8">
+					<h4>Quick Links</h4>
+					<div class="clearfix">
+						<div class="box">
+							<ul>
+								<li><a href="#">Dashboard</a></li>
+								<li><a href="#">Email Security</a></li>
+							</ul>
+						</div>
+						<div class="box">
+							<ul>
+								<li><a href="#">Alert Validation</a></li>
+								<li><a href="#">Assessments</a></li>
+							</ul>
+						</div>
+						<div class="box">
+							<ul>
+								<li><a href="#">DNS Security</a></li>
+								<li><a href="#">Network Security</a></li>
+							</ul>
+						</div>
+						<div class="box">
+							<ul>
+								<li><a href="#">Incident Response</a></li>
+								<li><a href="#">Analysis Framework</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<h4>&copy; Copyright 2014 CBTS Advanced Cyber Security</h4>
+					<ul>
+						<li><a href="#">Email ACS Support</a></li>
+					</ul>
+				</div>
+			</div><!-- row -->
+		</footer><!-- footer -->
+	
+	</div><!-- container -->
+	<script type="text/javascript" src="js/jquery-1-10-2-min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+    <script type="text/javascript" src="js/daterangepicker.js"></script>
+
+
+	<script type="text/javascript">	
+	    var AlertSummary = angular.module('AlertSummary',[]);
+        // -------------------------------------------------- //
+        // -------------------------------------------------- //
+ 
+ 
+        // This controls the demo.
+        AlertSummary.controller(
+            "DateRangeController",
+			function ($scope, $http, transformRequestAsFormPost) {
+
+var JSONData = [{"broid": "CQ7Jvk1ljMfkBLFx5f", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 20, 13, 42, 33]}, {"broid": "CsEubKahGaSXZilq4", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70, "static_mmem": 50}}, "key": [2014, 1, 21, 16, 27, 10]}, {"broid": "CXjd1D4fvZpRqELWwd", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70, "static_mmem": 50}}, "key": [2014, 1, 21, 17, 13, 10]}, {"broid": "ClhqxT3a3igEmcf7Ph", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100, "static_mmem": 50}}, "key": [2014, 1, 21, 18, 12, 6]}, {"broid": "CoXGFT2I0JNq4jRBmj", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100, "static_mmem": 50}}, "key": [2014, 1, 21, 21, 39, 31]}, {"broid": "CYfRi7j2J5VAICTv2", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 22, 0, 14, 7]}, {"broid": "Cvx22CEKTSzmIuz05", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 22, 4, 16, 13]}, {"broid": "CFqntW1BPrCaBmD6Y", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 23, 19, 29, 47]}, {"broid": "Ch6lFu4dcOlglWn7Jc", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 23, 19, 29, 51]}, {"broid": "CBCy7G1HVRUS1Kxiv7", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 24, 16, 1, 33]}, {"broid": "Ct5OzF4dny7zCnDjg1", "results": {"overallPainLevel": 98, "analyzerPainLevel": {"yara": 40, "static_mmem": 98}}, "key": [2014, 1, 24, 17, 30, 0]}, {"broid": "CuEMiM2hssOncbUANj", "results": {"overallPainLevel": 80, "analyzerPainLevel": {"vt": 80, "static_mmem": 48}}, "key": [2014, 1, 27, 17, 54, 12]}, {"broid": "CIs9hT1iH6vhRSBSrd", "results": {"overallPainLevel": 80, "analyzerPainLevel": {"vt": 80}}, "key": [2014, 1, 27, 18, 4, 41]}, {"broid": "CkpTwP1UZMUFaZmQA4", "results": {"overallPainLevel": 80, "analyzerPainLevel": {"vt": 80}}, "key": [2014, 1, 27, 19, 4, 47]}, {"broid": "C2Nq7w39cFd1KNYQ1b", "results": {"overallPainLevel": 80, "analyzerPainLevel": {"vt": 80}}, "key": [2014, 1, 27, 19, 13, 4]}, {"broid": "C4fHjI1ZBfb2yzdT44", "results": {"overallPainLevel": 80, "analyzerPainLevel": {"vt": 80}}, "key": [2014, 1, 27, 19, 16, 23]}, {"broid": "CYTVtq2vtme3hdGi2e", "results": {"overallPainLevel": 56, "analyzerPainLevel": {"yara": 40, "static_mmem": 56}}, "key": [2014, 1, 27, 21, 14, 28]}, {"broid": "CRadwH2PFEKObOsGZf", "results": {"overallPainLevel": 80, "analyzerPainLevel": {"vt": 80}}, "key": [2014, 1, 27, 21, 50, 15]}, {"broid": "CEQvNU2jpuAKNp8ZW8", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 28, 14, 25, 45]}, {"broid": "CHM51BhJzohzVwcxi", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100, "static_mmem": 48}}, "key": [2014, 1, 28, 14, 28, 46]}, {"broid": "CgUwEk1NbQxpTWLQ97", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 28, 14, 29, 4]}, {"broid": "C4TLdy1xDe8ss0Ecbj", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 28, 14, 56, 12]}, {"broid": "ClhoOVnA4cmIKNjM5", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 29, 0, 12, 25]}, {"broid": "CGJonbPj6EXvFQHCa", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 29, 1, 56, 51]}, {"broid": "CSNUuz43iboD0QTv0e", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 29, 2, 1, 17]}, {"broid": "CDQmcgnBZQ3AlodJ7", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 29, 2, 10, 50]}, {"broid": "Cw5nAa4XqVEEnOwlNf", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 29, 8, 4, 32]}, {"broid": "Crxvsm1pFrM0P7Bfvh", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"yara": 60, "vt": 100}}, "key": [2014, 1, 29, 14, 37, 25]}, {"broid": "CX9KRq6rCMqRLJlL8", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 37, 32]}, {"broid": "CMqWfl2YAifOBmpqd3", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 37, 39]}, {"broid": "Cs5ScB3wAu2y8h8Wqc", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 37, 47]}, {"broid": "C08stZ5AlzKXVuzLf", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 37, 55]}, {"broid": "CJ3UC510wX3I3ic1n6", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 38, 4]}, {"broid": "C3ukVf3I0q1OV0xwck", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 38, 17]}, {"broid": "ChhryMSxIrGUUWAHe", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 38, 30]}, {"broid": "CPcqw03L1wGz0ssFSl", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 14, 43, 44]}, {"broid": "CgAO7K1Za0lGz4LFKe", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"yara": 60, "vt": 100}}, "key": [2014, 1, 29, 21, 54, 0]}, {"broid": "CLxFrREodU1jE1w4f", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 54, 7]}, {"broid": "CD0DnI2FA4B1GWJni8", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 54, 16]}, {"broid": "COUzaA3jISiLw0YqJj", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 54, 23]}, {"broid": "Cstakb4mpKhTOvb7F8", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 54, 36]}, {"broid": "CIahXH2VEG4iYGxBAf", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 54, 48]}, {"broid": "C6htHP3KGHndQA9Ie3", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 55, 1]}, {"broid": "Cdrxwyq8f0l6YLTDd", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 55, 16]}, {"broid": "CvH3kz4khugSV8Rioa", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 55, 29]}, {"broid": "COKqex3ed0364lRSRj", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 55, 41]}, {"broid": "CvDTk7P1cwYB3RhQ1", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 29, 21, 55, 58]}, {"broid": "CuNNBD1IpbokD6hjo6", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"yara": 60, "vt": 100}}, "key": [2014, 1, 30, 15, 9, 2]}, {"broid": "Car4Cn4tLJUSk8FJA9", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 30, 15, 9, 10]}, {"broid": "CrgKjd2wnjOABQDRg9", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 30, 15, 9, 18]}, {"broid": "CFi0ya31ug3SAEkTXb", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 30, 15, 9, 26]}, {"broid": "Cl8P2h23X46Zw6msK7", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 30, 15, 9, 34]}, {"broid": "CksN7tymdKas8MWt5", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 30, 15, 9, 44]}, {"broid": "CbKhhOh09F3S4q6w", "results": {"overallPainLevel": 60, "analyzerPainLevel": {"yara": 60}}, "key": [2014, 1, 30, 15, 9, 53]}, {"broid": "CDBryS2adFjVfzjny2", "results": {"overallPainLevel": 80, "analyzerPainLevel": {"vt": 80}}, "key": [2014, 1, 30, 15, 56, 51]}, {"broid": "CV7EuD72BtaJlsSVd", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 16, 6, 53]}, {"broid": "CviY8616MQG37lRvsh", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 16, 31, 13]}, {"broid": "Cs55vj7SBKQ8GQzK4", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 30, 16, 48, 54]}, {"broid": "CJI6CoVX0VvpJc7Oc", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 17, 4, 49]}, {"broid": "Cw8i6G3Bgw9GKB2auk", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 17, 5, 34]}, {"broid": "CIQsPm43yPZTsXYKc", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 17, 6, 30]}, {"broid": "C24TKq1cPGQqiRJ3Kh", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 17, 37, 42]}, {"broid": "CcQAbA2QEuUbFDLKIg", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 18, 27, 13]}, {"broid": "CQ5NSoxCGsIKnyMT", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 19, 5, 9]}, {"broid": "C9Fi0g2ShM1Vxnc908", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 19, 7, 41]}, {"broid": "CZ4bky4M0qjTeeY8n1", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 19, 8, 32]}, {"broid": "CLQzqr4CXNu1MOOuG3", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 19, 9, 20]}, {"broid": "C1OTaDVPjaMXxenUd", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 19, 37, 35]}, {"broid": "CgeCs01Y5FWsmWaNKf", "results": {"overallPainLevel": 70, "analyzerPainLevel": {"vt": 70}}, "key": [2014, 1, 30, 23, 5, 23]}, {"broid": "CI89Kq2tfwcPnxq0Ch-1", "results": {"overallPainLevel": 100, "analyzerPainLevel": {"vt": 100}}, "key": [2014, 1, 31, 20, 40, 17]}];
+
+            	$scope.loaded = true;
+            	
+				var arrayOfAlerts = eval(JSONData);
+                $scope.alerts = arrayOfAlerts;
+                $scope.myalerts = []; $scope.myresults= [];
+                $scope.analyzerPainLevel= [];
+                $scope.mytestval= [];
+
+                $scope.jsondump = "";
+                var datekey = [];
+
+                for (var key in arrayOfAlerts) {
+                 	if (arrayOfAlerts.hasOwnProperty(key)) {
+                           var obj2 = arrayOfAlerts[key];
+                           datekey = obj2.key;
+                           var newvar = datekey.toString();
+                           console.log(newvar);
+                           $scope.mytestval.push(arrayOfAlerts[key].results);
+                     }
+      		    }
+
+ 				for (var results in $scope.myalerts) {
+					if ($scope.myalerts.hasOwnProperty(results)) {
+						var value2=$scope.myalerts[results];
+						$scope.myresults.push(value1);
+					}
+      		    }
+
+				for (var key in $scope.myresults) {
+    				if ($scope.myresults.hasOwnProperty(key)) { // this will check if key is owned by data object and not by any of it's ancestors
+//       					 alert(key+': '+$scope.myresults[key]);
+						for (var i = 0, len=$scope.myresults.length; i < len; i++) {
+                            var resultsObj = $scope.myresults[i].results;
+							for (var overallPainLevel in resultsObj) {
+                                if (resultsObj.hasOwnProperty(overallPainLevel)) {
+                                     var PainLevelObj = resultsObj[overallPainLevel];
+                                     for (var vt in PainLevelObj) {
+                                          if (PainLevelObj.hasOwnProperty(vt)) {
+
+                                              var value2 = PainLevelObj[vt];
+
+                                              $scope.analyzerPainLevel.push(value2);
+                                          }
+                                     }
+                                }
+                            }
+						}
+    				}
+				}
+
+      		    $scope.oapainlevel = 100;
+      		    $scope.yara = 0;
+      		    $scope.static_mmem = 0;
+                 $scope.getAlertCount = function() {
+                	return $scope.alerts.length;
+                };
+
+                $scope.getPainLevel = function() {
+                	return $scope.oapainlevel;
+                };
+
+                 $scope.getYara = function() {
+                	return $scope.yara;
+                };
+
+   				$scope.getmmem = function() {
+                	return $scope.static_mmem;
+                };
+
+                angular.element(document).ready(function ($scope) {
+                    alert("Angular document is ready");
+                    var jsonstart;
+                    var jsonend;
+
+                    $('#reservation').daterangepicker(null, function(start, end, label) {
+                        alert('An angular selected date range was chosen: ' + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+                        var jsonstart = start.format('YYYY,M,DD,HH,MM,SS');
+                        var jsonend = end.format('YYYY,M,DD,HH,MM,SS');
+                        console.log(jsonstart);
+                        console.log(jsonend);
+
+
+                    });
+                       $scope.jsonstart = jsonstart;
+                       $scope.jsonend = jsonend;
+                       $scope.apply;
+
+                });
+
+            }
+
+		);
+
+	function PainLevelController($scope) {
+
+		    $scope.displaypain = $scope.oapainlevel;
+		    $scope.apply();
+
+	}
+
+// -------------------------------------------------- //
+// -------------------------------------------------- //
+// provide a request-transformation method that is used to prepare the outgoing
+// request as a FORM post instead of a JSON packet.
+        AlertSummary.factory(
+            "transformRequestAsFormPost",
+            function() {
+ 
+                // I prepare the request data for the form post.
+                function transformRequest( data, getHeaders ) {
+ 
+                    var headers = getHeaders();
+ 
+                    headers[ "Content-type" ] = "application/x-www-form-urlencoded; charset=utf-8";
+ 
+                    return( serializeData( data ) );
+ 
+                }
+ 
+ 
+                // Return the factory value.
+                return( transformRequest );
+ 
+ 
+                // ---
+                // PRVIATE METHODS.
+                // ---
+ 
+ 
+                // I serialize the given Object into a key-value pair string. This
+                // method expects an object and will default to the toString() method.
+                // --
+                // NOTE: This is an atered version of the jQuery.param() method which
+                // will serialize a data collection for Form posting.
+                // --
+                // https://github.com/jquery/jquery/blob/master/src/serialize.js#L45
+                function serializeData( data ) {
+ 
+                    // If this is not an object, defer to native stringification.
+                    if ( ! angular.isObject( data ) ) {
+ 
+                        return( ( data == null ) ? "" : data.toString() );
+ 
+                    }
+ 
+                    var buffer = [];
+ 
+                    // Serialize each key in the object.
+                    for ( var name in data ) {
+ 
+                        if ( ! data.hasOwnProperty( name ) ) {
+ 
+                            continue;
+ 
+                        }
+ 
+                        var value = data[ name ];
+ 
+                        buffer.push(
+                            encodeURIComponent( name ) +
+                            "=" +
+                            encodeURIComponent( ( value == null ) ? "" : value )
+                        );
+ 
+                    }
+ 
+                    // Serialize the buffer and clean it up for transportation.
+                    var source = buffer
+                        .join( "&" )
+                        .replace( /%20/g, "+" )
+                    ;
+ 
+                    return( source );
+ 
+                }
+ 
+            }
+        );
+
+        // -------------------------------------------------- //
+        // -------------------------------------------------- //
+
+
+AlertSummary.directive('slider', function ($parse) {
+    return {
+      restrict: 'E',
+      replace: true,
+      template: '<input type="text" />',
+      link: function ($scope, element, attrs) {
+        var model = $parse(attrs.model);
+        var slider = $(element[0]).slider();
+
+        slider.on('slide', function(ev) {
+          model.assign($scope, ev.value);
+          $scope.alertcount = $scope.getAlertCount(); 
+          $scope.oapainlevel = $scope.getPainLevel();
+     	  $scope.yara = $scope.getYara();
+     	  $scope.static_mmem = $scope.getmmem();
+     	  
+ 		 if (ev.value == 15)
+          {
+
+         	 $scope.oapainlevel = 80;
+         	 
+         }
+
+
+          if (ev.value == 28)
+          {
+
+         	 $scope.oapainlevel = 60;
+         	 
+         }
+
+  		if (ev.value == 50)
+          {
+
+         	 $scope.oapainlevel = 70;
+         	 
+         }
+
+        if (ev.value == 30)
+          {
+
+         	 $scope.yara = 60;
+         	 
+         }
+ 		  if (ev.value == 4)
+          {
+
+         	 $scope.static_mmem = 50;
+         	 
+         }
+
+         if (ev.value > 5)
+          {
+
+         	 $scope.static_mmem = 0;
+         	 
+         }
+          	 
+          $scope.
+          $ 
+          $scope.$apply();
+        });
+         
+      }
+    }
+});
+
+/*  Greg White    */
+ 
+!function( $ ) {
+
+	var Slider = function(element, options) {
+		this.element = $(element);
+		this.picker = $('<div class="slider">'+
+							'<div class="slider-track">'+
+								'<div class="slider-selection"></div>'+
+								'<div class="slider-handle"></div>'+
+								'<div class="slider-handle"></div>'+
+							'</div>'+
+							'<div class="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'+
+						'</div>')
+							.insertBefore(this.element)
+							.append(this.element);
+		this.id = this.element.data('slider-id')||options.id;
+		if (this.id) {
+			this.picker[0].id = this.id;
+		}
+
+		if (typeof Modernizr !== 'undefined' && Modernizr.touch) {
+			this.touchCapable = true;
+		}
+
+		var tooltip = this.element.data('slider-tooltip')||options.tooltip;
+
+		this.tooltip = this.picker.find('.tooltip');
+		this.tooltipInner = this.tooltip.find('div.tooltip-inner');
+
+		this.orientation = this.element.data('slider-orientation')||options.orientation;
+		switch(this.orientation) {
+			case 'vertical':
+				this.picker.addClass('slider-vertical');
+				this.stylePos = 'top';
+				this.mousePos = 'pageY';
+				this.sizePos = 'offsetHeight';
+				this.tooltip.addClass('right')[0].style.left = '100%';
+				break;
+			default:
+				this.picker
+					.addClass('slider-horizontal')
+					.css('width', this.element.outerWidth());
+				this.orientation = 'horizontal';
+				this.stylePos = 'left';
+				this.mousePos = 'pageX';
+				this.sizePos = 'offsetWidth';
+				this.tooltip.addClass('top')[0].style.top = -this.tooltip.outerHeight() - 14 + 'px';
+				break;
+		}
+
+		this.min = this.element.data('slider-min')||options.min;
+		this.max = this.element.data('slider-max')||options.max;
+		this.step = this.element.data('slider-step')||options.step;
+		this.value = this.element.data('slider-value')||options.value;
+		if (this.value[1]) {
+			this.range = true;
+		}
+
+		this.selection = this.element.data('slider-selection')||options.selection;
+		this.selectionEl = this.picker.find('.slider-selection');
+		if (this.selection === 'none') {
+			this.selectionEl.addClass('hide');
+		}
+		this.selectionElStyle = this.selectionEl[0].style;
+
+
+		this.handle1 = this.picker.find('.slider-handle:first');
+		this.handle1Stype = this.handle1[0].style;
+		this.handle2 = this.picker.find('.slider-handle:last');
+		this.handle2Stype = this.handle2[0].style;
+
+		var handle = this.element.data('slider-handle')||options.handle;
+		switch(handle) {
+			case 'round':
+				this.handle1.addClass('round');
+				this.handle2.addClass('round');
+				break
+			case 'triangle':
+				this.handle1.addClass('triangle');
+				this.handle2.addClass('triangle');
+				break
+		}
+
+		if (this.range) {
+			this.value[0] = Math.max(this.min, Math.min(this.max, this.value[0]));
+			this.value[1] = Math.max(this.min, Math.min(this.max, this.value[1]));
+		} else {
+			this.value = [ Math.max(this.min, Math.min(this.max, this.value))];
+			this.handle2.addClass('hide');
+			if (this.selection == 'after') {
+				this.value[1] = this.max;
+			} else {
+				this.value[1] = this.min;
+			}
+		}
+		this.diff = this.max - this.min;
+		this.percentage = [
+			(this.value[0]-this.min)*100/this.diff,
+			(this.value[1]-this.min)*100/this.diff,
+			this.step*100/this.diff
+		];
+
+		this.offset = this.picker.offset();
+		this.size = this.picker[0][this.sizePos];
+
+		this.formater = options.formater;
+
+		this.layout();
+
+		if (this.touchCapable) {
+			// Touch: Bind touch events:
+			this.picker.on({
+				touchstart: $.proxy(this.mousedown, this)
+			});
+		} else {
+			this.picker.on({
+				mousedown: $.proxy(this.mousedown, this)
+			});
+		}
+
+		if (tooltip === 'show') {
+			this.picker.on({
+				mouseenter: $.proxy(this.showTooltip, this),
+				mouseleave: $.proxy(this.hideTooltip, this)
+			});
+		} else {
+			this.tooltip.addClass('hide');
+		}
+	};
+
+	Slider.prototype = {
+		constructor: Slider,
+
+		over: false,
+		inDrag: false,
+		
+		showTooltip: function(){
+			this.tooltip.addClass('in');
+			//var left = Math.round(this.percent*this.width);
+			//this.tooltip.css('left', left - this.tooltip.outerWidth()/2);
+			this.over = true;
+		},
+		
+		hideTooltip: function(){
+			if (this.inDrag === false) {
+				this.tooltip.removeClass('in');
+			}
+			this.over = false;
+		},
+
+		layout: function(){
+			this.handle1Stype[this.stylePos] = this.percentage[0]+'%';
+			this.handle2Stype[this.stylePos] = this.percentage[1]+'%';
+			if (this.orientation == 'vertical') {
+				this.selectionElStyle.top = Math.min(this.percentage[0], this.percentage[1]) +'%';
+				this.selectionElStyle.height = Math.abs(this.percentage[0] - this.percentage[1]) +'%';
+			} else {
+				this.selectionElStyle.left = Math.min(this.percentage[0], this.percentage[1]) +'%';
+				this.selectionElStyle.width = Math.abs(this.percentage[0] - this.percentage[1]) +'%';
+			}
+			if (this.range) {
+				this.tooltipInner.text(
+					this.formater(this.value[0]) + 
+					' : ' + 
+					this.formater(this.value[1])
+				);
+				this.tooltip[0].style[this.stylePos] = this.size * (this.percentage[0] + (this.percentage[1] - this.percentage[0])/2)/100 - (this.orientation === 'vertical' ? this.tooltip.outerHeight()/2 : this.tooltip.outerWidth()/2) +'px';
+			} else {
+				this.tooltipInner.text(
+					this.formater(this.value[0])
+				);
+				this.tooltip[0].style[this.stylePos] = this.size * this.percentage[0]/100 - (this.orientation === 'vertical' ? this.tooltip.outerHeight()/2 : this.tooltip.outerWidth()/2) +'px';
+			}
+		},
+
+		mousedown: function(ev) {
+
+			// Touch: Get the original event:
+			if (this.touchCapable && ev.type === 'touchstart') {
+				ev = ev.originalEvent;
+			}
+
+			this.offset = this.picker.offset();
+			this.size = this.picker[0][this.sizePos];
+
+			var percentage = this.getPercentage(ev);
+
+			if (this.range) {
+				var diff1 = Math.abs(this.percentage[0] - percentage);
+				var diff2 = Math.abs(this.percentage[1] - percentage);
+				this.dragged = (diff1 < diff2) ? 0 : 1;
+			} else {
+				this.dragged = 0;
+			}
+
+			this.percentage[this.dragged] = percentage;
+			this.layout();
+
+			if (this.touchCapable) {
+				// Touch: Bind touch events:
+				$(document).on({
+					touchmove: $.proxy(this.mousemove, this),
+					touchend: $.proxy(this.mouseup, this)
+				});
+			} else {
+				$(document).on({
+					mousemove: $.proxy(this.mousemove, this),
+					mouseup: $.proxy(this.mouseup, this)
+				});
+			}
+
+			this.inDrag = true;
+			var val = this.calculateValue();
+			this.element.trigger({
+					type: 'slideStart',
+					value: val
+				}).trigger({
+					type: 'slide',
+					value: val
+				});
+			return false;
+		},
+
+		mousemove: function(ev) {
+			
+			// Touch: Get the original event:
+			if (this.touchCapable && ev.type === 'touchmove') {
+				ev = ev.originalEvent;
+			}
+
+			var percentage = this.getPercentage(ev);
+			if (this.range) {
+				if (this.dragged === 0 && this.percentage[1] < percentage) {
+					this.percentage[0] = this.percentage[1];
+					this.dragged = 1;
+				} else if (this.dragged === 1 && this.percentage[0] > percentage) {
+					this.percentage[1] = this.percentage[0];
+					this.dragged = 0;
+				}
+			}
+			this.percentage[this.dragged] = percentage;
+			this.layout();
+			var val = this.calculateValue();
+			this.element
+				.trigger({
+					type: 'slide',
+					value: val
+				})
+				.data('value', val)
+				.prop('value', val);
+			return false;
+		},
+
+		mouseup: function(ev) {
+			if (this.touchCapable) {
+				// Touch: Bind touch events:
+				$(document).off({
+					touchmove: this.mousemove,
+					touchend: this.mouseup
+				});
+			} else {
+				$(document).off({
+					mousemove: this.mousemove,
+					mouseup: this.mouseup
+				});
+			}
+
+			this.inDrag = false;
+			if (this.over == false) {
+				this.hideTooltip();
+			}
+			this.element;
+			var val = this.calculateValue();
+			this.element
+				.trigger({
+					type: 'slideStop',
+					value: val
+				})
+				.data('value', val)
+				.prop('value', val);
+			return false;
+		},
+
+		calculateValue: function() {
+			var val;
+			if (this.range) {
+				val = [
+					(this.min + Math.round((this.diff * this.percentage[0]/100)/this.step)*this.step),
+					(this.min + Math.round((this.diff * this.percentage[1]/100)/this.step)*this.step)
+				];
+				this.value = val;
+			} else {
+				val = (this.min + Math.round((this.diff * this.percentage[0]/100)/this.step)*this.step);
+				this.value = [val, this.value[1]];
+			}
+			return val;
+		},
+
+		getPercentage: function(ev) {
+			if (this.touchCapable) {
+				ev = ev.touches[0];
+			}
+			var percentage = (ev[this.mousePos] - this.offset[this.stylePos])*100/this.size;
+			percentage = Math.round(percentage/this.percentage[2])*this.percentage[2];
+			return Math.max(0, Math.min(100, percentage));
+		},
+
+		getValue: function() {
+			if (this.range) {
+				return this.value;
+			}
+			return this.value[0];
+		},
+
+		setValue: function(val) {
+			this.value = val;
+
+			if (this.range) {
+				this.value[0] = Math.max(this.min, Math.min(this.max, this.value[0]));
+				this.value[1] = Math.max(this.min, Math.min(this.max, this.value[1]));
+			} else {
+				this.value = [ Math.max(this.min, Math.min(this.max, this.value))];
+				this.handle2.addClass('hide');
+				if (this.selection == 'after') {
+					this.value[1] = this.max;
+				} else {
+					this.value[1] = this.min;
+				}
+			}
+			this.diff = this.max - this.min;
+			this.percentage = [
+				(this.value[0]-this.min)*100/this.diff,
+				(this.value[1]-this.min)*100/this.diff,
+				this.step*100/this.diff
+			];
+			this.layout();
+		}
+	};
+
+	$.fn.slider = function ( option, val ) {
+		return this.each(function () {
+			var $this = $(this),
+				data = $this.data('slider'),
+				options = typeof option === 'object' && option;
+			if (!data)  {
+				$this.data('slider', (data = new Slider(this, $.extend({}, $.fn.slider.defaults,options))));
+			}
+			if (typeof option == 'string') {
+				data[option](val);
+			}
+		})
+	};
+
+	$.fn.slider.defaults = {
+		min: 0,
+		max: 70,
+		step: 1,
+		orientation: 'horizontal',
+		value: 5,
+		selection: 'before',
+		tooltip: 'show',
+		handle: 'round',
+		formater: function(value) {
+			return value;
+		}
+	};
+
+	$.fn.slider.Constructor = Slider;
+
+}( window.jQuery );
+</script>	
+	
+</body>
+</html>
